@@ -122,3 +122,49 @@ export const underlined = () => (
     </Button>
   </div>
 );
+
+export const sizes = () => (
+  <div>
+    <div>
+      <Button size='small'>
+        DEFAULT
+      </Button>
+
+      <Button color='primary' size="small">
+        PRIMARY
+      </Button>
+
+      <Button color='accent' size="small">
+        ACCENT
+      </Button>
+    </div>
+
+    <div>
+      <Button variant="outlined" size="medium">
+        DEFAULT
+      </Button>
+
+      <Button variant="outlined" color='primary' size="medium">
+        PRIMARY
+      </Button>
+
+      <Button variant="outlined" color='accent' size="medium">
+        ACCENT
+      </Button>
+    </div>
+
+    <div>
+      <Button variant="flat" size="larger">
+        DEFAULT
+      </Button>
+
+      <Button variant="flat" color='primary' size="larger">
+        PRIMARY
+      </Button>
+
+      <Button variant="flat" color='accent' size="larger">
+        ACCENT
+      </Button>
+    </div>
+  </div>
+);

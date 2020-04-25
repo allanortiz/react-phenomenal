@@ -4,7 +4,11 @@ export const Theme: DefaultTheme = {
   baseSpace: 8,
   button: {
     defaultColor: '#eeeeee',
-    height: 40,
+    size: {
+      small: 30,
+      medium: 40,
+      larger: 50,
+    }
   },
   color: {
     primary: '#B37EAA',

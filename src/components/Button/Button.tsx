@@ -11,6 +11,8 @@ type Variant =
 
 type Color = 'default' | 'primary' | 'accent';
 
+type Size = 'small' | 'medium' | 'larger';
+
 type ButtonProps = {
   variant?: Variant;
   color?: Color;
@@ -19,6 +21,7 @@ type ButtonProps = {
   href?: string;
   startIcon?: any;
   endIcon?: any;
+  size?: Size;
 };
 
 const BasicButton = styled.button<ButtonProps>`
@@ -36,7 +39,12 @@ const BasicButton = styled.button<ButtonProps>`
   cursor: pointer;
   font-family: ${({ theme }) => theme.text.font};
   font-size: ${({ theme }) => theme.text.size.body1};
-  height: ${({ theme }) => theme.button.height}px;
+  height: ${({ theme, size }) => 
+    size === 'small'
+    ? theme.button.size.small
+    : size === 'larger'
+    ? theme.button.size.larger
+    : theme.button.size.medium}px;
 
   &:disabled {
     cursor: not-allowed;
@@ -105,6 +113,7 @@ const Button: React.FC<ButtonProps> = ({
   color = 'default',
   variant = 'default',
   disabled = false,
+  size,
   children,
 }) => {
   const StyledButton = getStyledButton(variant);
@@ -115,6 +124,7 @@ const Button: React.FC<ButtonProps> = ({
       variant={variant}
       onClick={onClick}
       disabled={disabled}
+      size={size}
     >
       {variant !== 'icon' && children}
     </StyledButton>

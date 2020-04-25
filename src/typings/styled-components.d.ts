@@ -5,7 +5,11 @@ declare module 'styled-components' {
     baseSpace: number;
     button: {
       defaultColor: string;
-      height: number;
+      size: {
+        small: number;
+        medium: number;
+        larger: number;
+      }
     };
     color: {
       primary: string;
