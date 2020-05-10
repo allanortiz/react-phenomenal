@@ -17,6 +17,7 @@ export const Theme: DefaultTheme = {
   },
   typography: {
     font: 'Roboto, sans-serif',
+    // weight: ...
     size: {
       h1: 96,
       h2: 60, 
