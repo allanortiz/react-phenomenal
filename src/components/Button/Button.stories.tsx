@@ -1,10 +1,11 @@
 import React from 'react';
+import { Box } from '../Box';
 import Button from './Button';
 
 export default { title: 'Button' };
 
 export const basic = () => (
-  <div>
+  <Box display="flex" color="#fff" m="20px">
     <Button>
       DEFAULT
     </Button>
@@ -24,147 +25,193 @@ export const basic = () => (
     <Button href="/" color='primary'>
       LINK
     </Button>
-  </div>
+  </Box>
 );
 
 export const raised = () => (
-  <div>
-    <Button variant="raised">
-      DEFAULT
-    </Button>
+  <Box display="flex" m="20px">
+    <Box>
+      <Button variant="raised">
+        DEFAULT
+      </Button>
+    </Box>
 
-    <Button variant="raised" color='primary'>
-      PRIMARY
-    </Button>
+    <Box ml="10px">
+      <Button variant="raised" color='primary'>
+        PRIMARY
+      </Button>
+    </Box>
 
-    <Button variant="raised" color='accent'>
-      ACCENT
-    </Button>
+    <Box ml="10px">
+      <Button variant="raised" color='accent'>
+        ACCENT
+      </Button>
+    </Box>
 
-    <Button variant="raised" disabled>
-      DISABLED
-    </Button>
+    <Box ml="10px">
+      <Button variant="raised" disabled>
+        DISABLED
+      </Button>
+    </Box>
 
-    <Button variant="raised" href="/" color='primary'>
-      LINK
-    </Button>
-  </div>
+    <Box ml="10px">
+      <Button variant="raised" href="/" color='primary'>
+        LINK
+      </Button>
+    </Box>
+  </Box>
 );
 
 export const flat = () => (
-  <div>
+  <Box display="flex" m="20px">
     <Button variant="flat">
       DEFAULT
     </Button>
 
-    <Button variant="flat" color='primary'>
-      PRIMARY
-    </Button>
+    <Box ml="10px">
+      <Button variant="flat" color='primary'>
+        PRIMARY
+      </Button>
+    </Box>
 
-    <Button variant="flat" color='accent'>
-      ACCENT
-    </Button>
+    <Box ml="10px">
+      <Button variant="flat" color='accent'>
+        ACCENT
+      </Button>
+    </Box>
 
-    <Button variant="flat" disabled>
-      DISABLED
-    </Button>
+    <Box ml="10px">
+      <Button variant="flat" disabled>
+        DISABLED
+      </Button>
+    </Box>
 
-    <Button variant="flat" href="/" color='primary'>
-      LINK
-    </Button>
-  </div>
+    <Box ml="10px">
+      <Button variant="flat" href="/" color='primary'>
+        LINK
+      </Button>
+    </Box>
+  </Box>
 );
 
 export const outlined = () => (
-  <div>
+  <Box display="flex" m="20px">
     <Button variant="outlined">
       DEFAULT
     </Button>
 
-    <Button variant="outlined" color='primary'>
-      PRIMARY
-    </Button>
+    <Box ml="10px">
+      <Button variant="outlined" color='primary'>
+        PRIMARY
+      </Button>
+    </Box>
 
-    <Button variant="outlined" color='accent'>
-      ACCENT
-    </Button>
+    <Box ml="10px">
+      <Button variant="outlined" color='accent'>
+        ACCENT
+      </Button>
+    </Box>
 
-    <Button variant="outlined" disabled>
-      DISABLED
-    </Button>
+    <Box ml="10px">
+      <Button variant="outlined" disabled>
+        DISABLED
+      </Button>
+    </Box>
 
-    <Button variant="outlined" href="/" color='primary'>
-      LINK
-    </Button>
-  </div>
+    <Box ml="10px">
+      <Button variant="outlined" href="/" color='primary'>
+        LINK
+      </Button>
+    </Box>
+  </Box>
 );
 
 export const underlined = () => (
-  <div>
+  <Box display="flex" m="20px">
     <Button variant="underlined">
       DEFAULT
     </Button>
 
-    <Button variant="underlined" color='primary'>
-      PRIMARY
-    </Button>
+    <Box ml="10px">
+      <Button variant="underlined" color='primary'>
+        PRIMARY
+      </Button>
+    </Box>
 
-    <Button variant="underlined" color='accent'>
-      ACCENT
-    </Button>
+    <Box ml="10px">
+      <Button variant="underlined" color='accent'>
+        ACCENT
+      </Button>
+    </Box>
 
-    <Button variant="underlined" disabled>
-      DISABLED
-    </Button>
+    <Box ml="10px">
+      <Button variant="underlined" disabled>
+        DISABLED
+      </Button>
+    </Box>
 
-    <Button variant="underlined" href="/" color='primary'>
-      LINK
-    </Button>
-  </div>
+    <Box ml="10px">
+      <Button variant="underlined" href="/" color='primary'>
+        LINK
+      </Button>
+    </Box>
+  </Box>
 );
 
 export const sizes = () => (
-  <div>
-    <div>
+  <Box mt="20px">
+    <Box m="20px" display="flex">
       <Button size='small'>
         DEFAULT
       </Button>
 
-      <Button color='primary' size="small">
-        PRIMARY
-      </Button>
+      <Box ml="10px">
+        <Button color='primary' size="small">
+          PRIMARY
+        </Button>
+      </Box>
 
-      <Button color='accent' size="small">
-        ACCENT
-      </Button>
-    </div>
+      <Box ml="10px">
+        <Button color='accent' size="small">
+          ACCENT
+        </Button>
+      </Box>
+    </Box>
 
-    <div>
+    <Box m="20px" display="flex">
       <Button variant="outlined" size="medium">
         DEFAULT
       </Button>
 
-      <Button variant="outlined" color='primary' size="medium">
-        PRIMARY
-      </Button>
+      <Box ml="10px">
+        <Button variant="outlined" color='primary' size="medium">
+          PRIMARY
+        </Button>
+      </Box>
 
-      <Button variant="outlined" color='accent' size="medium">
-        ACCENT
-      </Button>
-    </div>
+      <Box ml="10px">
+        <Button variant="outlined" color='accent' size="medium">
+          ACCENT
+        </Button>
+      </Box>
+    </Box>
 
-    <div>
+    <Box m="20px" display="flex">
       <Button variant="flat" size="larger">
         DEFAULT
       </Button>
 
-      <Button variant="flat" color='primary' size="larger">
-        PRIMARY
-      </Button>
+      <Box ml="10px">
+        <Button variant="flat" color='primary' size="larger">
+          PRIMARY
+        </Button>
+      </Box>
 
-      <Button variant="flat" color='accent' size="larger">
-        ACCENT
-      </Button>
-    </div>
-  </div>
+      <Box ml="10px">
+        <Button variant="flat" color='accent' size="larger">
+          ACCENT
+        </Button>
+      </Box>
+    </Box>
+  </Box>
 );

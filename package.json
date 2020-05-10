@@ -12,14 +12,16 @@
     "@types/react-dom": "^16.9.6",
     "@types/react-router-dom": "^5.1.4",
     "@types/styled-components": "^5.1.0",
+    "@types/styled-system": "^5.1.9",
     "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.7",
-    "polished": "^3.5.2",
+    "polished": "^3.6.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.0",
+    "styled-system": "^5.1.5",
     "typescript": "^3.8.3"
   },
   "scripts": {

@@ -37,8 +37,8 @@ const BasicButton = styled.button<ButtonProps>`
       ? theme.color.accent
       : theme.color.text};
   cursor: pointer;
-  font-family: ${({ theme }) => theme.text.font};
-  font-size: ${({ theme }) => theme.text.size.body1};
+  font-family: ${({ theme }) => theme.typography.font};
+  font-size: ${({ theme }) => theme.typography.size.body1};
   height: ${({ theme, size }) => 
     size === 'small'
     ? theme.button.size.small

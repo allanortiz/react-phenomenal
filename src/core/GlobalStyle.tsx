@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-family: ${({ theme }) => theme.text.font};
+    font-family: ${({ theme }) => theme.typography.font};
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
   }
