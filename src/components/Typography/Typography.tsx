@@ -39,7 +39,6 @@ const Typography: React.FC<TypographyProps> = ({
   fontStyle,
   color,
   bg,
-  backgroundColor,
   opacity,
   children
 }) => {
@@ -55,7 +54,6 @@ const Typography: React.FC<TypographyProps> = ({
       fontStyle={fontStyle}
       color={color}
       bg={bg}
-      backgroundColor={backgroundColor}
       opacity={opacity}>
       {children}
     </Text>

@@ -31,3 +31,34 @@ export const basic = () => (
     </Box>
   </Box>
 );
+
+export const anotherProperties = () => (
+  <Box>
+    <Typography variant="body1" fontSize="50px">Font size 50px</Typography>
+
+    <Box>
+      <Typography variant="body1" display="inline" color="brown">Inline with brown color</Typography>
+      <Typography variant="body1" display="inline" color="yellowgreen">Inline with yellowgreen color</Typography>
+      <Typography variant="body1" component="span">Span component</Typography>
+    </Box>
+
+    <br />
+
+    <Typography variant="body1" textAlign="left">Text align left</Typography>
+
+    <Typography variant="body1" textAlign="center">Text align center</Typography>
+
+    <Typography variant="body1" textAlign="right">Text align right</Typography>
+
+    <br />
+
+    <Typography variant="body1" bg="red" color="white">Background color</Typography>
+
+    <br />
+
+    <div>There is already an h1 in the page, let's not duplicate it:</div>
+    <Typography variant="h1" component="h2">
+      h2 Heading like h1
+    </Typography>
+  </Box>
+);
