@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Box } from 'components/Box';
-import { TypographyProps as StyledSystemTypographyProps } from 'styled-system';
+import { ColorProps, TypographyProps as StyledSystemTypographyProps } from 'styled-system';
 import theme from 'core/theme';
 
 type Variant = 'h1'
@@ -18,8 +18,9 @@ type Variant = 'h1'
 
 type TypographyProps = {
   variant: Variant;
+  display?: string;
   component?: any;
-} & StyledSystemTypographyProps;
+} & ColorProps & StyledSystemTypographyProps;
 
 const Text = styled(Box)`
   margin: 0 0 0.35em 0;
@@ -27,6 +28,7 @@ const Text = styled(Box)`
 
 const Typography: React.FC<TypographyProps> = ({
   variant,
+  display,
   component = theme.typography.variantMapping[variant],
   fontFamily = theme.typography.font,
   fontSize = `${theme.typography.size[variant]}px`,
@@ -35,17 +37,26 @@ const Typography: React.FC<TypographyProps> = ({
   letterSpacing,
   textAlign,
   fontStyle,
+  color,
+  bg,
+  backgroundColor,
+  opacity,
   children
 }) => {
   return (
     <Text as={component} 
+      display={display}
       fontFamily={fontFamily} 
       fontSize={fontSize}
       fontWeight={fontWeight}
       lineHeight={lineHeight}
       letterSpacing={letterSpacing}
       textAlign={textAlign}
-      fontStyle={fontStyle}>
+      fontStyle={fontStyle}
+      color={color}
+      bg={bg}
+      backgroundColor={backgroundColor}
+      opacity={opacity}>
       {children}
     </Text>
   )
