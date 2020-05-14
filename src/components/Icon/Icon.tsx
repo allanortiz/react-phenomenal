@@ -4,10 +4,11 @@ import { Icon as MDIIcon } from '@mdi/react';
 type IconProps = {
   path: string;
   title?: string;
-  size?: number;
+  description?: string;
+  size?: number | string;
   rotate?: number;
   color?: string;
-  spin?: boolean;
+  spin?: boolean | number;
   horizontal?: boolean;
   vertical?: boolean;
 };
@@ -15,6 +16,7 @@ type IconProps = {
 const Icon: React.FC<IconProps> = ({
   path,
   title,
+  description,
   size = 1,
   horizontal,
   vertical,
@@ -25,6 +27,7 @@ const Icon: React.FC<IconProps> = ({
   return (
     <MDIIcon path={path} 
       title={title}
+      description={description}
       size={size}
       rotate={rotate}
       color={color}
