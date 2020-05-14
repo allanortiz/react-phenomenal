@@ -22,10 +22,11 @@ const Icon: React.FC<IconProps> = ({
   vertical,
   rotate,
   color,
-  spin
+  spin,
+  ...props
 }) => {
   return (
-    <MDIIcon path={path} 
+    <MDIIcon path={path}
       title={title}
       description={description}
       size={size}
@@ -34,8 +35,9 @@ const Icon: React.FC<IconProps> = ({
       spin={spin}
       horizontal={horizontal}
       vertical={vertical}
+      {...props}
     />
   )
-}
+};
 
 export default Icon;

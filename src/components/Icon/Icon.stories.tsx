@@ -13,7 +13,6 @@ import {
   mdiFormatColorFill,
   mdiColorHelper,
 } from '@mdi/js';
-import { Stack } from '@mdi/react';
 
 export default { title: 'Icon' };
 
@@ -112,10 +111,10 @@ export const stack = () => (
   <Box ml="10px">
     <Box>
       <h4>Basic</h4>
-      <Stack size={1}>
+      <IconStack size={1}>
         <Icon path={mdiSmoking} />
         <Icon path={mdiBlockHelper} color="red" />
-      </Stack>
+      </IconStack>
     </Box>
 
     <Box>
@@ -139,6 +138,10 @@ export const stack = () => (
       <IconStack size={2} spin>
         <Icon path={mdiSmoking} color="#444" size={1}/>
         <Icon path={mdiBlockHelper} color="red"/>
+      </IconStack>
+      <IconStack size={2}>
+        <Icon path={mdiSmoking} color="#444" size={1} spin={5} />
+        <Icon path={mdiBlockHelper} color="red" spin/>
       </IconStack>
     </Box>
   </Box>
