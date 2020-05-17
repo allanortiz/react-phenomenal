@@ -17,17 +17,17 @@ type Variant = 'h1'
   | 'caption';
 
 type TypographyProps = {
-  variant: Variant;
+  variant?: Variant;
   display?: string;
   component?: any;
 } & ColorProps & StyledSystemTypographyProps;
 
-const Text = styled(Box)`
+const StyledBox = styled(Box)`
   margin: 0 0 0.35em 0;
 `;
 
 const Typography: React.FC<TypographyProps> = ({
-  variant,
+  variant = 'body1',
   display,
   component = theme.typography.variantMapping[variant],
   fontFamily = theme.typography.font,
@@ -43,7 +43,7 @@ const Typography: React.FC<TypographyProps> = ({
   children
 }) => {
   return (
-    <Text as={component} 
+    <StyledBox as={component} 
       display={display}
       fontFamily={fontFamily} 
       fontSize={fontSize}
@@ -56,7 +56,7 @@ const Typography: React.FC<TypographyProps> = ({
       bg={bg}
       opacity={opacity}>
       {children}
-    </Text>
+    </StyledBox>
   )
 }
 

@@ -2,6 +2,13 @@ import { DefaultTheme } from 'styled-components';
 
 export const Theme: DefaultTheme = {
   baseSpace: 8,
+  breakpoints: {
+    xs: 444,
+    sm: 600,
+    md: 960,
+    lg: 1280,
+    xl: 1920,
+  },
   button: {
     defaultColor: '#ffffff',
     size: {
