@@ -13,6 +13,16 @@ type ContainerProps = {
   fixed?: boolean;
 };
 
+const getMaxWidth = (breakpoint: MaxWidth, fixed: boolean, theme: any, currentBreakpoint: Breakpoint, nextBreakpoint?: Breakpoint) => {
+  if (!breakpoint) return 'none';
+
+  if (!fixed || !nextBreakpoint || theme.breakpoints[breakpoint] < theme.breakpoints[currentBreakpoint]) {
+    return `${theme.breakpoints[breakpoint]}px`;
+  }
+
+  return `${theme.breakpoints[nextBreakpoint]}px`;
+}
+
 const StyledBox = styled(Box)<ContainerProps>`
   margin-left: auto;
   margin-right: auto;
@@ -21,55 +31,24 @@ const StyledBox = styled(Box)<ContainerProps>`
   padding-right: ${({ disableGutters }) => (disableGutters ? 'unset' : '24px')};
 
   ${mediaqueries.up.xl`
-    max-width: ${({ breakpoint, theme }: any) =>
-      !breakpoint
-        ? 'none'
-        : `${theme.breakpoints[breakpoint]}px`};
+    max-width: ${({ breakpoint, fixed, theme }: any) => getMaxWidth(breakpoint, fixed, theme, 'xl')};
   `}
 
   ${mediaqueries.down.xl`
-    max-width: ${({ breakpoint, fixed, theme }: any) =>
-      !breakpoint
-        ? 'none'
-        : !fixed
-        ? `${theme.breakpoints[breakpoint]}px`
-        : theme.breakpoints[breakpoint] < theme.breakpoints.xl
-        ? `${theme.breakpoints[breakpoint]}px`
-        : `${theme.breakpoints.lg}px`};
-  `}
+    max-width: ${({ breakpoint, fixed, theme }: any) => getMaxWidth(breakpoint, fixed, theme, 'xl', 'lg')};
+  `};
 
   ${mediaqueries.down.lg`
-    max-width: ${({ breakpoint, fixed, theme }: any) =>
-      !breakpoint
-        ? 'none'
-        : !fixed
-        ? `${theme.breakpoints[breakpoint]}px`
-        : theme.breakpoints[breakpoint] < theme.breakpoints.lg
-        ? `${theme.breakpoints[breakpoint]}px`
-        : `${theme.breakpoints.md}px`};
-  `}
+    max-width: ${({ breakpoint, fixed, theme }: any) => getMaxWidth(breakpoint, fixed, theme, 'lg', 'md')};
+  `};
 
   ${mediaqueries.down.md`
-    max-width: ${({ breakpoint, fixed, theme }: any) =>
-      !breakpoint
-        ? 'none'
-        : !fixed
-        ? `${theme.breakpoints[breakpoint]}px`
-        : theme.breakpoints[breakpoint] < theme.breakpoints.md
-        ? `${theme.breakpoints[breakpoint]}px`
-        : `${theme.breakpoints.sm}px`};
-  `}
+    max-width: ${({ breakpoint, fixed, theme }: any) => getMaxWidth(breakpoint, fixed, theme, 'md', 'sm')};
+  `};
 
   ${mediaqueries.down.sm`
-    max-width: ${({ breakpoint, fixed, theme }: any) =>
-      !breakpoint
-        ? 'none'
-        : !fixed
-        ? `${theme.breakpoints[breakpoint]}px`
-        : theme.breakpoints[breakpoint] < theme.breakpoints.sm
-        ? `${theme.breakpoints[breakpoint]}px`
-        : `${theme.breakpoints.xs}px`};
-  `}
+    max-width: ${({ breakpoint, fixed, theme }: any) => getMaxWidth(breakpoint, fixed, theme, 'sm', 'xs')};
+  `};
 `;
 
 const Container: React.FC<ContainerProps> = ({

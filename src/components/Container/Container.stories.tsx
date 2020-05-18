@@ -6,7 +6,7 @@ import { Box } from '../Box';
 export default { title: 'Container' };
 
 const StyledBox = styled(Box)`
-  background-color: #CFE8FC;
+  background-color: #cfe8fc;
   height: 100vh;
 `;
 
