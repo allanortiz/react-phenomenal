@@ -13,6 +13,7 @@ const StyledBox = styled(Box)<DividerProps>`
   background-color: ${({ theme }) => theme.divider.backgroundColor};
   border: none;
   height: ${({ orientation }) => (orientation === 'vertical' ? '100%' : '1px')};
+  list-style-type: none;
   margin: 0;
   width: ${({ orientation, variant }) =>
     variant === 'full'
