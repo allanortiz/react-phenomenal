@@ -23,6 +23,9 @@ declare module 'styled-components' {
       accent: string;
       text: string;
     };
+    divider: {
+      backgroundColor: string;
+    };
     space: Number[];
     typography: {
       font: string;
