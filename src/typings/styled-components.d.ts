@@ -23,6 +23,7 @@ declare module 'styled-components' {
       accent: string;
       text: string;
     };
+    space: Number[];
     typography: {
       font: string;
       size: {

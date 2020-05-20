@@ -22,6 +22,7 @@ export const Theme: DefaultTheme = {
     accent: '#53608C',
     text: '#333333'
   },
+  space: [0, 4, 8, 16, 24, 32, 64, 128, 256, 512],
   typography: {
     font: 'Roboto, sans-serif',
     // weight: ...
