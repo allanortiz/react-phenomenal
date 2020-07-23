@@ -7,7 +7,7 @@ import { Breakpoint } from 'common/mediaqueries';
 type MaxWidth = Breakpoint | false;
 
 type ContainerProps = {
-  breakpoint: MaxWidth;
+  breakpoint?: MaxWidth;
   component?: any;
   disableGutters?: boolean;
   fixed?: boolean;
@@ -68,7 +68,7 @@ const StyledBox = styled(Box)<ContainerProps>`
 
 const Container: React.FC<ContainerProps> = ({
   component,
-  breakpoint = 'sm',
+  breakpoint = 'md',
   disableGutters = false,
   fixed = false,
   children,

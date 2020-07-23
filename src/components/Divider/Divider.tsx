@@ -23,12 +23,11 @@ const StyledBox = styled(Box)<DividerProps>`
       : 'inherit'};
 
   ${({ absolute }) =>
-    absolute &&
-    `
-    botton: 0;
-    left: 0;
-    position: absolute;
-  `}
+    absolute && `
+      botton: 0;
+      left: 0;
+      position: absolute;
+    `}
 
   ${({ orientation, variant, theme }) =>
     variant !== 'middle'
