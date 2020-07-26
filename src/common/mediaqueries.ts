@@ -8,13 +8,23 @@ let down: any = {};
 let up: any = {};
 
 for (let breakpoint of breakpoints) {
-  down[breakpoint] = (...styles: any) => css`@media(max-width: ${({ theme }) => theme.breakpoints[breakpoint]}px) {${css(...styles)}}`;
-  up[breakpoint] = (...styles: any) => css`@media(min-width: ${({ theme }) => theme.breakpoints[breakpoint]}px) {${css(...styles)}}`;
+  down[breakpoint] = (...styles: any) =>
+    css`
+      @media (max-width: ${({ theme }) => theme.breakpoints[breakpoint]}px) {
+        ${css(...styles)}
+      }
+    `;
+  up[breakpoint] = (...styles: any) =>
+    css`
+      @media (min-width: ${({ theme }) => theme.breakpoints[breakpoint]}px) {
+        ${css(...styles)}
+      }
+    `;
 }
 
 const mediaqueries = {
   down: down,
-  up: up
+  up: up,
 };
 
 export default mediaqueries;
